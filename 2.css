@@ -1,0 +1,115 @@
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #333;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+.ticker span {
+  margin-right: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.ad-cpu {
+  color: #ff9800;
+}
+
+.ad-gpu {
+  color: #00bcd4;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+body
+ {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;  
+  margin-top: 50px;     
+}
+h2 {
+  text-align: center;
+  color: #00d8ff;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #2a2a3b;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #33334d;
+}
+
+.card h3 {
+  color: #f39c12;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.card.active .details {
+  display: block;
+}
+
+.card p {
+  margin: 0.3rem 0;
+}
+
+.image-box {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #000;
+}
